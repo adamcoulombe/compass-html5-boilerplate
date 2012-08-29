@@ -144,10 +144,9 @@ If you omit them, be sure to edit your javascript and style tags accordingly in 
     src/partials/_fonts.scss
     src/partials/_media.scss
     
-    js/jquery-1.6.2.min.js
-    js/modernizr-2.0.6.min.js
+    js/jquery.min.js
+    js/modernizr.min.js
     js/plugins.js
-    js/script.js
     
     .htaccess
     config.rb
