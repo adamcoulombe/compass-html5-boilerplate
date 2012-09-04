@@ -1,5 +1,8 @@
-@import "partials/base";
+@import "partials/vars";
 @import "html5-boilerplate";
+@import "compass/css3";
+@import "animation"; // https://github.com/ericam/compass-animation
+@import "partials/mixins";
 
 @include html5-boilerplate-normalize((
   html5,

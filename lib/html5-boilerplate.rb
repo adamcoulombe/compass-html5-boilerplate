@@ -1,3 +1,5 @@
+require 'compass'
+require 'animation'
 Compass::Frameworks.register("html5-boilerplate", :path => "#{File.dirname(__FILE__)}/..")
 
 if defined?(ActionController)

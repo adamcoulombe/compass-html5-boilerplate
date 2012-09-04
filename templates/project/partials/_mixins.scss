@@ -1,0 +1,14 @@
+@mixin h($h){
+	height:#{$h}px;
+}
+@mixin w($w){
+	width:#{$w}px;
+}
+@mixin wh($w,$h){
+	@include w($w);
+	@include h($h);
+}
+@mixin size($width,$height){
+	width:$width;
+	height:$height;
+}
