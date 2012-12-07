@@ -7,7 +7,7 @@
   @if not($list) or in-list($list, hidden) { .hidden { @include hidden; } }
   @if not($list) or in-list($list, visuallyhidden) { .visuallyhidden { @include visuallyhidden; } }
   @if not($list) or in-list($list, invisible) { .invisible { @include invisible; } }
-  @if not($list) or in-list($list, clearfix) { .clearfix { @include h5bp-clearfix; } }
+  @if not($list) or in-list($list, clearfix) { .clearfix { @include clearfix; } }
 }
 
 //For image replacement
@@ -70,7 +70,7 @@
 }
 
 // Contain floats: h5bp.com/q 
-@mixin h5bp-clearfix {
+@mixin clearfix {
   &:before, &:after {
     content: "";
     display: table;

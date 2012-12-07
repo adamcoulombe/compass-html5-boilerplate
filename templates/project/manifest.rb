@@ -5,6 +5,8 @@ Compass.configuration.css_dir= "css"
 Compass.configuration.images_dir= "img"
 
 stylesheet 'style.scss', :media => 'all'
+stylesheet 'partials/_vars.scss'
+stylesheet 'partials/_mixins.scss'
 stylesheet 'partials/_base.scss'
 stylesheet 'partials/_overrides.scss'
 stylesheet 'partials/_fonts.scss'
