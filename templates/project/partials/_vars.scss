@@ -1,15 +1,25 @@
 // This file must be imported before loading html5-boilerplate
 
+//branding
+$brand-color: #b94a19;
+
 // base
+$base-background-color: #fff;
 $base-font-family: unquote("sans-serif");
 $base-font-size: 13px;
 $base-line-height: 1.231;
 $font-color: #222;
 
 // Links
-$link-color: #00e;
+$link-color: #$brand-color;
 $link-visited-color: #551a8b;
 $link-hover-color: #06e;
+$link-underlines: none;
+$link-hover-underlines: underline;
 
 // Lists
 $list-left-margin: 40px;
+
+
+
+
