@@ -3,12 +3,14 @@
 @import "compass/css3";
 @import "animation"; // https://github.com/ericam/compass-animation
 @import "partials/mixins";
+@import "partials/animations";
 
 @include html5-boilerplate-normalize((
   html5,
   base,
   selection,
   lists,
+  links,
   images
 ));
 

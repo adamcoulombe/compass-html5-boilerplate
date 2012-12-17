@@ -11,7 +11,7 @@ $base-line-height: 1.231;
 $font-color: #222;
 
 // Links
-$link-color: #$brand-color;
+$link-color: $brand-color;
 $link-visited-color: #551a8b;
 $link-hover-color: #06e;
 $link-underlines: none;

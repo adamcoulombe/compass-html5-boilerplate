@@ -1,8 +1,10 @@
 !!! 5
 -# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
-<!--[if lt IE 7]> <html lang="en" class="no-js ie6 oldie"> <![endif]-->
-<!--[if IE 7]>    <html lang="en" class="no-js ie7 oldie"> <![endif]-->
-<!--[if IE 8]>    <html lang="en" class="no-js ie8 oldie"> <![endif]-->
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6 oldie lteie9 lteie8 lteie7 lteie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7 oldie lteie9 lteie8 lteie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8 oldie lteie9 lteie8"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie9 lteie9"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie10"> <![endif]-->
 -# Consider adding an manifest.appcache: h5bp.com/d/Offline
 <!--[if gt IE 8]><!-->
 %html.no-js{ :lang => "en" }
@@ -32,8 +34,9 @@
       All JavaScript at the bottom, except for Modernizr / Respond.
       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/
-    %script{ :src => "js/modernizr-2.6.2.min.js" }
-    
+    %script{ :src => "//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js" }
+    %script
+      window.Modernizr || document.write('<script src="js/modernizr-2.6.2.min.js"><\/script>')   
   %body
     #page
       %header#header
@@ -44,7 +47,7 @@
     -# Javascript at the bottom for fast page loading
     
     -# Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline
-    %script{ :src => "http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" }
+    %script{ :src => "//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" }
     %script
       window.jQuery || document.write('<script src="js/jquery-1.8.3.min.js"><\/script>')
     

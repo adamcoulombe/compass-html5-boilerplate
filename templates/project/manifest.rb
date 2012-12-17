@@ -2,37 +2,21 @@ description "Compass extension for HTML5 Boilerplate located at http://html5boil
 
 Compass.configuration.javascripts_dir= "js"
 Compass.configuration.css_dir= "css"
-Compass.configuration.images_dir= "img"
+Compass.configuration.images_dir= "images"
 
 stylesheet 'style.scss', :media => 'all'
 stylesheet 'partials/_vars.scss'
 stylesheet 'partials/_mixins.scss'
-stylesheet 'partials/_base.scss'
+stylesheet 'partials/_animations.scss'
 stylesheet 'partials/_overrides.scss'
-stylesheet 'partials/_fonts.scss'
-stylesheet 'partials/_media.scss'
-stylesheet 'partials/_page.scss'
 
-if Compass.configuration.project_type == :rails
-  file 'application.html.haml', :to => 'app/views/layouts/application.html.haml'
-  file '_flashes.html.haml', :to => 'app/views/layouts/_flashes.html.haml'
-  file '_footer.html.haml', :to => 'app/views/layouts/_footer.html.haml'
-  file '_head.html.haml', :to => 'app/views/layouts/_head.html.haml'
-  file '_header.html.haml', :to => 'app/views/layouts/_header.html.haml'
-  file '_javascripts.html.haml', :to => 'app/views/layouts/_javascripts.html.haml'
-  file '_stylesheets.html.haml', :to => 'app/views/layouts/_stylesheets.html.haml'
-  file 'files/google.yml', :to => 'config/google.yml'
-  javascript 'javascripts/jquery-1.8.0.min.js', :to => 'jquery.min.js'
-  javascript 'javascripts/modernizr-2.0.6.min.js', :to => 'modernizr.min.js'
-  javascript 'javascripts/plugins.js', :to => 'plugins.js'
-  javascript 'javascripts/rails.js', :to => 'rails.js'
-else
-  html 'index.html.haml'
-  javascript 'javascripts/jquery-1.8.0.min.js', :to => 'jquery-1.8.0.min.js'
-  javascript 'javascripts/modernizr-2.0.6.min.js', :to => 'modernizr-2.0.6.min.js'
-  javascript 'javascripts/plugins.js', :to => 'plugins.js'
-  javascript 'javascripts/script.js', :to => 'script.js'
-end
+html 'index.html.haml'
+javascript 'javascripts/jquery-1.8.3.min.js', :to => 'jquery-1.8.3.min.js'
+javascript 'javascripts/modernizr-2.6.2.min.js', :to => 'modernizr-2.6.2.min.js'
+javascript 'javascripts/script.js', :to => 'script.js'
+
+directory 'files/images', :to => 'images'
+directory 'files/fonts', :to => 'fonts'
 html 'files/404.html', :to => '404.html'
 html 'files/htaccess', :to => '.htaccess'
 html 'files/crossdomain.xml', :to => 'crossdomain.xml'

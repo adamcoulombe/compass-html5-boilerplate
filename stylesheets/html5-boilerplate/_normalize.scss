@@ -47,7 +47,7 @@ $base-line-height: 1.231 !default;
 $font-color: #222 !default;
 
 
-@mixin h5bp-normalize-base($base-font-family: $base-font-family, $base-font-size: $base-font-size, $base-line-height: $base-line-height, $font-color: $font-color) {
+@mixin h5bp-normalize-base($base-font-family: $base-font-family, $base-font-size: $base-font-size, $base-line-height: $base-line-height, $font-color: $font-color,$base-background-color:$base-background-color) {
   // 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
   // 2. Force vertical scrollbar in non-IE
   // 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
@@ -99,14 +99,10 @@ $link-visited-color: #551a8b !default;
 $link-hover-color: #06e !default;
 $link-underlines: none !default;
 $link-hover-underlines: underline !default;
-@mixin h5bp-normalize-links( $link-color: $link-color, $link-visited-color: $link-visited-color, $link-hover-color: $link-hover-color ) {
+@mixin h5bp-normalize-links( $link-color: $link-color, $link-visited-color: $link-visited-color, $link-hover-color: $link-hover-color,$link-underlines:$link-underlines, $link-hover-underlines:$link-hover-underlines ) {
   a {
     color: $link-color;
 	text-decoration:$link-underlines;
-  }
-
-  a:visited {
-    color: $link-visited-color;
   }
 
   a:hover {
