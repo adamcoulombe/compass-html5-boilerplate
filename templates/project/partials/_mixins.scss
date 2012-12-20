@@ -15,3 +15,69 @@
 @mixin no-list{
 	list-style:none; margin:0; padding:0;
 }
+@mixin ir ($display:block){
+	@if $display == block {
+		display:block;
+	} @else {
+		@include inline-block;
+	}
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+@mixin png-image-set($image){
+ @include image-set($image, "png");
+}
+@mixin jpg-image-set($image){
+ @include image-set($image, "jpg");
+}
+@mixin gif-image-set($image){
+ @include image-set($image, "gif");
+}
+@mixin image-size($image,$top-padding:0px,$right-padding:false,$bottom-padding:false,$left-padding:false){
+	@if $right-padding==false { $right-padding:$top-padding; }
+	@if $bottom-padding==false { $bottom-padding:$top-padding; }
+	@if $left-padding==false { $left-padding:$right-padding; }
+
+	$padding:false;
+	@if $top-padding>0 { $padding:true; }
+	@if $bottom-padding>0 { $padding:true; }
+	@if $right-padding>0 { $padding:true; }
+	@if $left-padding>0 { $padding:true; }
+	@if $padding==true {
+		padding:$top-padding $right-padding $bottom-padding $left-padding;
+	}
+
+	height:image-height($image) - $top-padding - $bottom-padding;
+	width:image-width($image) - $left-padding - $right-padding;
+	
+}
+
+@mixin image-set($name,$extension:"png"){
+  background-image: image_url("#{$name}.#{$extension}");
+  background-image: -webkit-image-set(image_url("#{$name}.#{$extension}") 1x, image_url("#{$name}@2x.#{$extension}") 2x);
+}
+@mixin ir-image-set($name,$extension:"png",$display:block){
+	@include ir($display);
+	@include image-set($name,$extension);
+	@include image-size("#{$name}.#{$extension}");
+}
+@mixin image-box($name,$extension:"png",$display:block){
+	@if $display == block {
+		display:block;
+	} @else {
+		@include inline-block;
+	}
+	background-image: image_url("#{$name}.#{$extension}");
+	@include image-size("#{$name}.#{$extension}");
+}
+@mixin image-set-box($name,$extension:"png",$display:block){
+	@if $display == block {
+		display:block;
+	} @else {
+		@include inline-block;
+	}
+
+	@include image-set($name,$extension);
+	@include image-size("#{$name}.#{$extension}");
+}
