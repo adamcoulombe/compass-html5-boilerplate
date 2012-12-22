@@ -14,10 +14,34 @@
   images
 ));
 
+@mixin is-page {
+	width:$page-width;
+	margin:auto;
+}
+@mixin bold-font{
+	font-family: $bold;
+	font-weight: 700;
+}
+
+@mixin book-font{
+	font-family: $book;
+	font-weight: 300;
+}
+@mixin italic-font{
+	font-family: $book;
+	font-weight: 300;
+	font-style: italic;
+}
+@mixin bold-italic-font{
+	font-family: $italic;
+	font-weight: 700;
+	font-style: italic;
+}
+
 
 body {}
 
-#page {}
+#view {}
 
 #header {}
 

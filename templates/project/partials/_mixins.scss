@@ -34,7 +34,7 @@
 @mixin gif-image-set($image){
  @include image-set($image, "gif");
 }
-@mixin image-size($image,$top-padding:0px,$right-padding:false,$bottom-padding:false,$left-padding:false){
+@mixin box($w,$h,$top-padding:0px,$right-padding:false,$bottom-padding:false,$left-padding:false){
 	@if $right-padding==false { $right-padding:$top-padding; }
 	@if $bottom-padding==false { $bottom-padding:$top-padding; }
 	@if $left-padding==false { $left-padding:$right-padding; }
@@ -48,9 +48,11 @@
 		padding:$top-padding $right-padding $bottom-padding $left-padding;
 	}
 
-	height:image-height($image) - $top-padding - $bottom-padding;
-	width:image-width($image) - $left-padding - $right-padding;
-	
+	height:$w- $top-padding - $bottom-padding;
+	width:$h - $left-padding - $right-padding;
+}
+@mixin image-size($image,$top-padding:0px,$right-padding:false,$bottom-padding:false,$left-padding:false){
+	@include box(image-width($image),image-height($image),$top-padding,$right-padding,$bottom-padding,$left-padding);	
 }
 
 @mixin image-set($name,$extension:"png"){

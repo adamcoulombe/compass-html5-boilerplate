@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.7.2}
   s.add_dependency("compass", [">= 0.11.1"])
+  s.add_dependency("animation",   [">= 0.1.alpha.3"])
+  
 end

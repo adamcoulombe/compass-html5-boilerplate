@@ -1,11 +1,20 @@
 // This file must be imported before loading html5-boilerplate
 
+$page-width:960px;
+
 //branding
 $brand-color: #b94a19;
+$serif:Georgia, "Times New Roman", Times, serif;
+$sans: Arial, Helvetica, sans-serif;
+$book:$sans;
+$bold:$sans;
+$italic:$sans;
+$bold-italic:$sans;
+
 
 // base
 $base-background-color: #fff;
-$base-font-family: unquote("sans-serif");
+$base-font-family: $sans;
 $base-font-size: 13px;
 $base-line-height: 1.231;
 $font-color: #222;
