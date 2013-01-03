@@ -1,5 +1,8 @@
 require 'compass'
+require 'sassy-strings'
 require 'animation'
+require 'compass-penner-easing'
+
 Compass::Frameworks.register("html5-boilerplate", :path => "#{File.dirname(__FILE__)}/..")
 
 if defined?(ActionController)

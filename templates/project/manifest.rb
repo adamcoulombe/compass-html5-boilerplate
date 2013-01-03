@@ -17,6 +17,7 @@ javascript 'javascripts/script.js', :to => 'script.js'
 
 directory 'files/images', :to => 'images'
 directory 'files/fonts', :to => 'fonts'
+html 'files/.gitignore', :to => '.gitignore'
 html 'files/404.html', :to => '404.html'
 html 'files/htaccess', :to => '.htaccess'
 html 'files/crossdomain.xml', :to => 'crossdomain.xml'

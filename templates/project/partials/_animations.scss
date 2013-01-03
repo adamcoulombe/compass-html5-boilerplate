@@ -1,3 +1,5 @@
+// Regular keyframe animations
+
 /* 
 @include keyframes(my-animation) {
   0%, 100% {
@@ -8,7 +10,31 @@
   }
 }
 
+*/
 
+// Penner keyframe animations
+
+/* 
+@include keyframes(my-bounce-animation) {
+	@include bounce-keyframes( (0 50, 100 300) ){
+		border-width:#{nth($_ANIM,1)}px;
+		width:#{nth($_ANIM,2)}px;
+	}
+}
+
+
+
+@include keyframes(my-elastic-animation) {
+	@include elastic-keyframes( (0 50, 300 100) ){
+		border-width:#{nth($_ANIM,1)}px;
+		width:#{nth($_ANIM,2)}px;
+	}
+}
+*/
+
+
+// Usage
+/*
 body {
   @include animation(my-animation 10s infinite);
 }
