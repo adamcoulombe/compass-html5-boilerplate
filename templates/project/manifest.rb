@@ -11,7 +11,7 @@ stylesheet 'partials/_animations.scss'
 stylesheet 'partials/_overrides.scss'
 
 html 'index.html.haml'
-javascript 'javascripts/jquery-1.8.3.min.js', :to => 'jquery-1.8.3.min.js'
+javascript 'javascripts/jquery-1.9.0.min.js', :to => 'jquery-1.9.0.min.js'
 javascript 'javascripts/modernizr-2.6.2.min.js', :to => 'modernizr-2.6.2.min.js'
 javascript 'javascripts/script.js', :to => 'script.js'
 
